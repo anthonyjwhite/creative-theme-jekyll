@@ -12,14 +12,17 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
 
+<!-- Article Modal -->
+<script type="text/javascript">
+    $(document).on("click", ".articlesmodal", function () {
+        var src = $(this).data('src');
+        $(".modal-body iframe .articlesmodal").attr("src", src);
+    });
+</script>
+
 <!-- Video Modal -->
 <script>
 $(document).ready(function() {
-
-$('.ls-modal').on('click', function(e){
-  e.preventDefault();
-  $('#myModal').modal('show').find('.modal-body').load($(this).attr('href'));
-});    
     
 // Gets the video src from the data-src on each button
 var $videoSrc;  
