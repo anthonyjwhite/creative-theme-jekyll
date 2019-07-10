@@ -28,5 +28,24 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <!-- -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+        autoPlayYouTubeModal();
+        });
+     //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+        function autoPlayYouTubeModal(){
+          var trigger = $("body").find('[data-toggle="modal"]');
+          trigger.click(function() {
+            var theModal = $(this).data( "target" ),
+            videoSRC = $(this).attr( "data-theVideo" ), 
+            videoSRCauto = videoSRC+"?autoplay=1" ;
+            $(theModal+' iframe').attr('src', videoSRCauto);
+            $(theModal+' button.close').click(function () {
+                $(theModal+' iframe').attr('src', videoSRC);
+            });   
+          });
+        }
+    </script>
+    
 </head>
