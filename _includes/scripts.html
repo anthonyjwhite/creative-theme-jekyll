@@ -14,13 +14,11 @@
 
 <!-- Video Modal -->
 <script>
-    $('#link').click(function () {
-        var src = 'http://www.youtube.com/v/FSi2fJALDyQ&amp;autoplay=1';
-        $('#myModal').modal('show');
-        $('#myModal iframe').attr('src', src);
-    });
+$('.yt-link').on('show.bs.modal', function () {
+    $(this).html('<iframe width="533" height="400" src="https://www.youtube.com/embed/' + $(this).attr('rel') + '?rel=0;showinfo=0;autohide=1;controls=2;autoplay=1" frameborder="0" allowfullscreen></iframe>');
+});
 
-    $('#myModal button').click(function () {
-        $('#myModal iframe').removeAttr('src');
-    });
+$('.yt-link').on('hide.bs.modal', function () {
+    $(this).html('&nbsp;');
+});
 </script>
