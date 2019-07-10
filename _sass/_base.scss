@@ -156,6 +156,7 @@ header {
     @include background-cover;
     background-position: center;
     background-image: url('../img/header2.jpg');
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.45);
     text-align: center;
     color: white;
     .header-content {
