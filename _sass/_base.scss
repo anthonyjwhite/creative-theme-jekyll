@@ -156,6 +156,7 @@ header {
     @include background-cover;
     background-position: center;
     background-image: url('../img/header2.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
     text-align: center;
     color: white;
     .header-content {
