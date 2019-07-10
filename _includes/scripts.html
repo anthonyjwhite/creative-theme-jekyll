@@ -13,16 +13,14 @@
 <script src="js/creative.js"></script>
 
 <!-- Video Modal -->
-  <script>
-  $(function() {
-    $(".video").click(function () {
-      var theModal = $(this).data("target"),
-      videoSRC = $(this).attr("data-video"),
-      videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
-      $(theModal + ' iframe').attr('src', videoSRCauto);
-      $(theModal).on('click', function(){
-        $(theModal + ' iframe').attr('src', videoSRC);
-      });
+<script>
+    $('#link').click(function () {
+        var src = 'http://www.youtube.com/v/FSi2fJALDyQ&amp;autoplay=1';
+        $('#myModal').modal('show');
+        $('#myModal iframe').attr('src', src);
     });
-  });
-  </script>
+
+    $('#myModal button').click(function () {
+        $('#myModal iframe').removeAttr('src');
+    });
+</script>
